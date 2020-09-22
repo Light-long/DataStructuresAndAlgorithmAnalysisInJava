@@ -137,9 +137,10 @@ public class LinkedListAlgorithm {
     public static Node reverseLinkedList(Node head) {
         Node pre = null;
         Node cur = head;
+        Node next;
 
         while (cur != null) {
-            Node next = cur.getNext();
+            next = cur.getNext();
             cur.setNext(pre);
             pre = cur;
             cur = next;
